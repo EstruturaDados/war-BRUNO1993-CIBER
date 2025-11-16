@@ -2,7 +2,7 @@
 // Autor: Bruno Machado
 // Data: 16NOV2025
 // Disciplina: Estrutura de Dados
-// Projeto: Jogo de Estratégia WAR - Nível Mestre
+// Projeto: Jogo de Estratégia WAR 
 // ==========================================================
 // Descrição:
 // Implementação do jogo de tabuleiro WAR em C, utilizando
