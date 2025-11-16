@@ -1,0 +1,7 @@
+# Arquivos compilados
+*.o
+*.out
+war
+
+# Arquivos do VSCode
+.vscode/

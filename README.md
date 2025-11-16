@@ -1,145 +1,52 @@
-# 🗺️ Desafio WAR Estruturado – Conquista de Territórios
+#  Projeto WAR Estruturado – Minha Implementação
 
-Bem-vindo ao **Desafio WAR Estruturado!** Inspirado no famoso jogo de estratégia, este desafio convida você a programar diferentes versões do jogo WAR, evoluindo seus conhecimentos em **C** à medida que avança pelos níveis **Novato**, **Aventureiro** e **Mestre**.
+Bem-vindo ao repositório da minha solução para oDesafio WAR Estruturado! Este projeto foi desenvolvido em C e implementa uma versão funcional do clássico jogo de estratégia, com foco em modularização, gerenciamento de memória e lógica de jogo.
 
-A empresa **MateCheck** contratou você para criar uma versão estruturada do WAR. Cada nível propõe novas funcionalidades, conceitos e desafios de programação. **Você escolhe por onde começar!**
+A versão final neste repositório corresponde aoNível Mestre do desafio, que engloba todas as funcionalidades propostas.
 
 ---
 
-## 🧩 Nível Novato: Cadastro Inicial dos Territórios
+ Demonstração em Vídeo
 
-### 🎯 Objetivo
+Veja o jogo em ação! A demonstração abaixo mostra a inicialização, um ataque bem-sucedido, uma tentativa de ataque inválida e a verificação da missão.
 
-- Criar uma `struct` chamada `Territorio`.
-- Usar um **vetor estático de 5 elementos** para armazenar os territórios.
-- Cadastrar os dados de cada território: **Nome**, **Cor do Exército**, e **Número de Tropas**.
-- Exibir o estado atual do mapa.
+*(Aqui ficará o nosso GIF)*
 
-### ⚙️ Funcionalidades
+---
 
-- Leitura de dados pelo terminal (`fgets` e `scanf`)
-- Impressão organizada dos dados de todos os territórios
+ Como Compilar e Executar
 
-### 💡 Conceitos abordados
+Este projeto foi desenvolvido e testado em um ambiente Linux. Para compilar e executar, siga os passos abaixo:
 
-- `struct`
-- Vetor estático
-- Entrada/saída com `scanf`, `fgets`, e `printf`
+1. Clone o repositório:
+    bash
+    git clone https://github.com/EstruturaDados/war-BRUNO1993-CIBER.git
+    
 
-### 📥 Entrada
+2. Navegue até a pasta do projeto:
+    bash
+    cd war-BRUNO1993-CIBER
+    
 
-O usuário digita o nome do território, a cor do exército dominante e o número de tropas para **cada um dos 5 territórios**.
+3. Compile o programa usando o GCC:
+    bash
+    gcc war.c -o war
+    
 
-### 📤 Saída
+4. Execute o jogo:
+    bash
+    ./war
+    
 
+---
 
+ Funcionalidades da Versão Final
 
-## 🧗‍♂️ Nível Aventureiro: Batalhas Estratégicas
+-Mapa Dinâmico: O mapa é criado comalocação dinâmica de memória (`calloc`).
+-Batalhas Estratégicas: Lógica de batalha com rolagem de dados (`rand()`), ondeempates favorecem a defesa.
+-Sistema de Missões: No início do jogo, uma missão secreta é atribuída ao jogador (Destruir o exército Vermelho ou Conquistar 7 territórios).
+-Interface Interativa: Menu principal para atacar, verificar missão ou sair.
+-Boas Práticas de Programação: Código modularizado, uso de ponteiros e `const` para segurança dos dados.
 
-### 🎯 Objetivo
-
-- Substituir o vetor estático por **alocação dinâmica com `calloc`**
-- Criar uma função para **simular ataques entre dois territórios**
-- Utilizar números aleatórios para representar dados de batalha
-
-### 🆕 Novidades em relação ao Nível Novato
-
-- Alocação dinâmica de memória com `calloc`
-- Uso de **ponteiros**
-- Laço interativo para o jogador escolher **territórios para atacar e defender**
-- Simulação de dados de ataque e defesa com `rand()`
-
-### ⚙️ Funcionalidades
-
-- Cadastro dos territórios (como no Nível Novato)
-- Fase de ataque com:
-  - Escolha de atacante e defensor
-  - Dados de ataque/defesa
-  - Lógica:
-    - Se atacante vence → defensor perde 1 tropa
-    - Se defensor perde todas → território é conquistado
-    - Empates favorecem o atacante
-
-### 💡 Conceitos abordados
-
-- Ponteiros
-- `calloc` / `free`
-- Aleatoriedade com `rand()` / `srand()`
-- Funções para modularização
-
-### 📥 Entrada
-
-- Território **atacante** (1 a 5)
-- Território **defensor** (1 a 5)
-
-### 📤 Saída
-
-Exibição do resultado da batalha, dados sorteados e mudanças no mapa.
-
-
-
-## 🧠 Nível Mestre: Missões e Modularização Total
-
-### 🎯 Objetivo
-
-- Dividir o código em funções bem definidas
-- Implementar um **sistema de missões**
-- Verificar cumprimento da missão
-- Aplicar **boas práticas** (uso de `const`, modularização, etc.)
-
-### 🆕 Diferenças em relação ao Nível Aventureiro
-
-- Modularização total em funções
-- Missões aleatórias atribuídas:
-  1. Destruir o exército **Verde**
-  2. Conquistar **3 territórios**
-- Menu interativo com opções
-
-### ⚙️ Funcionalidades
-
-- Inicialização automática dos territórios
-- Menu principal com 3 opções:
-  1. Atacar
-  2. Verificar Missão
-  3. Sair
-- Verificação de vitória da missão
-
-### 💡 Conceitos abordados
-
-- Modularização
-- `const` correctness
-- Estruturação em múltiplas funções
-- Passagem por referência
-
-### 📥 Entrada
-
-- Ações do jogador via menu:
-  - `1` - Atacar
-  - `2` - Verificar Missão
-  - `0` - Sair
-- Escolha de territórios para ataque
-
-### 📤 Saída
-
-- Mapa atualizado
-- Resultados das batalhas
-- Verificação da missão
-- Mensagem de vitória
-
-
-
-## 🏁 Conclusão
-
-Com este **Desafio WAR Estruturado**, você praticará fundamentos essenciais da linguagem **C** de forma **divertida e progressiva**.
-
-Cada nível foca em um conjunto de habilidades:
-
-- 🟢 **Novato**: `struct`, vetor, entrada/saída
-- 🔵 **Aventureiro**: ponteiros, memória dinâmica, lógica de jogo
-- 🟣 **Mestre**: modularização, design limpo, sistema de missões
-
-
-
-🚀 **Boa sorte! Avance nos níveis e torne-se um mestre da programação estratégica!**
-
-> Equipe de Ensino – MateCheck
+---
+💡Desenvolvido por: Bruno Machado.
