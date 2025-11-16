@@ -10,7 +10,7 @@ A versão final neste repositório corresponde aoNível Mestre do desafio, que e
 
 Veja o jogo em ação! A demonstração abaixo mostra a inicialização, um ataque bem-sucedido, uma tentativa de ataque inválida e a verificação da missão.
 
-*(Aqui ficará o nosso GIF)*
+![Demonstração do Jogo War](demonstracao.gif)
 
 ---
 
